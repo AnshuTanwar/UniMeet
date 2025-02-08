@@ -13,7 +13,7 @@
 ### 🔊 **Automatic Noise Detection**
 - Real-time audio filtering with advanced signal processing techniques to suppress background noise.
 
-### 🌐 **Localized Timezone Display**
+### 🌐 **Localized Timezone Display**  
 - Dynamic timezone synchronization powered by geolocation APIs for global meeting coordination.
 
 ### 💬 **Text-to-Speech Integration**
