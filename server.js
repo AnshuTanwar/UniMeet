@@ -9,7 +9,7 @@ const ejsMate = require('ejs-mate');
 const Course = require('./models/course');
 
 const app = express();
-
+ 
 app.engine('ejs', ejsMate);             
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
