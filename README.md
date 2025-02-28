@@ -37,7 +37,7 @@ To run Unimeet locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/unimeet.git
+   git clone https://github.com/AnshuTanwar/unimeet.git
    cd unimeet
    ```
 
