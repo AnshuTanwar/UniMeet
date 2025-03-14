@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const Course = require('./models/course');
 
-const app = express();
+const app = express();  
  
 app.engine('ejs', ejsMate);             
 app.set('view engine', 'ejs');
@@ -38,7 +38,7 @@ app.get('/login', (req, res) => {
 
 // Render signup page
 app.get('/signup', (req, res) => {
-    res.render('user/signup', { title: 'Sign Up' });
+    res.render('user/signuph', { title: 'Sign Up' });
 });
 
 //show courses 
