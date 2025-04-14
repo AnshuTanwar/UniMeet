@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend of UniMeet ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/app.js ",
+    "start": "node src/app.js",
+    "prod": "pm2 src/app.js"
+  },
+  "author": "Aanshu Tanwar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "crypto": "^1.0.1",
+    "express": "^4.21.2",
+    "http-status": "^2.1.0",
+    "mongoose": "^8.9.5",
+    "socket.io": "^4.8.1"
+  }
+}
