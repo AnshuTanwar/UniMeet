@@ -1,6 +1,7 @@
 import httpStatus from "http-status";
 import { User } from "../models/user.model.js";
 import bycript, { hash } from 'bcrypt';
+import crypto from "crypto";
 
 
 const login = async(req, res) => {
@@ -12,12 +13,12 @@ const login = async(req, res) => {
     }
 
     try {
-        const user = await User.find({username});
+        const user = await User.findOne({username});
         if(!user) {
             return res.status(httpStatus.NOT_FOUND).json({message: "user Not Found"})
         }
 
-        if(bycript.compare(password, user.password())) {
+        if(bycript.compare(password,user.password)) {
             let token = crypto.randomBytes(20).toString("hex");
             user.token = token;
             await user.save();
@@ -30,9 +31,10 @@ const login = async(req, res) => {
 }
 
 const register = async (req, res) => {
-    const {name, usename, password} = req.body;
+    
 
     try{
+        const {name, username, password} = req.body;
         const existinguser = await User.findOne({ username });
         if(existinguser) {
             return res.status(httpStatus.FOUND).json({message: "User already exists"});
@@ -40,7 +42,7 @@ const register = async (req, res) => {
 
         const hashedPassword = await bycript.hash(password, 10);
 
-        const newUser = new user({
+        const newUser = new User({
             name: name,
             username: username,
             password: hashedPassword
