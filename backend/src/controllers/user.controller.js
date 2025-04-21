@@ -3,7 +3,7 @@ import { User } from "../models/user.model.js";
 import bycript, { hash } from 'bcrypt';
 import crypto from "crypto";
 
-
+//login logic 
 const login = async(req, res) => {
 
     const {username, password} = req.body;
