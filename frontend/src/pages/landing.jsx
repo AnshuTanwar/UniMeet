@@ -14,6 +14,11 @@ export default function LandingPage() {
                     <div role='button'>Login</div>
                 </div>
             </nav>
+
+            <div className="landingMainContainer">
+                <div></div>
+                <div></div>
+            </div>
         </div>
     )
 }
